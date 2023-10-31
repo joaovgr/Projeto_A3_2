@@ -37,5 +37,19 @@ INSERT INTO login (cpf, login, senha, nivel)
 VALUES
 ('12345678900', 'admin', 'admin', 1);
 
-UPDATE login SET senha = MD5(senha) WHERE cpf = cpf
 UPDATE login SET senha = 'admin'
+UPDATE login SET senha = MD5(senha) WHERE cpf = cpf
+
+
+USE seguranca_2;
+
+INSERT INTO usuario(nome, cpf, telefone)
+VALUES
+('Gerente','71090956495', '83998044858')
+
+INSERT INTO login(cpf, login, senha, nivel)
+VALUES
+('71090956495', 'gerente', 'gerente', 2)
+
+UPDATE login SET senha = 'gerente'
+UPDATE login SET senha = MD5(senha) WHERE cpf = cpf
