@@ -38,7 +38,7 @@ VALUES
 ('12345678900', 'admin', 'admin', 1);
 
 UPDATE login SET senha = 'admin'
-UPDATE login SET senha = MD5(senha) WHERE cpf = cpf
+UPDATE login SET senha = MD5(senha) WHERE login = 'admin'
 
 
 USE seguranca_2;
@@ -52,4 +52,4 @@ VALUES
 ('71090956495', 'gerente', 'gerente', 2)
 
 UPDATE login SET senha = 'gerente'
-UPDATE login SET senha = MD5(senha) WHERE cpf = cpf
+UPDATE login SET senha = MD5(senha) WHERE login = 'gerente'
